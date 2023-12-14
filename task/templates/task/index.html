@@ -40,7 +40,7 @@
     </head>
     <body>
         <div class="centered-form">
-            <form action="" method="post">
+            <form action="" method="post" class="form-wrapper">
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="taskTitle" class="form-label"><h4>Task</h4></label>
@@ -83,6 +83,13 @@
                         }
                     });
             }        
+            var form = document.querySelector('.form-wrapper');
+
+            form.addEventListener('submit',function(e){
+                e.preventDefault()
+                console.log('Form Submitted')
+            })
+        
         </script>
 
             
